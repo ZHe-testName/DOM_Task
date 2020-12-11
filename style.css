@@ -34,10 +34,18 @@ body{
     list-style-type: none;
 }
 
+.founded{
+    margin-top: 0px;
+}
+
 .founded-variant{
     background-color: rgb(255, 215, 215);
     border: 1px solid gray;
+    cursor: pointer;
+}
 
+.founded-variant:hover{
+    background-color: wheat;
 }
 
 .repo{
