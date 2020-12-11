@@ -1,3 +1,10 @@
+@font-face{
+    font-family: 'Bebas-Neue';
+    src: url('./font/BebasNeue-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
 *{
     box-sizing: border-box;
     padding: 0;
@@ -5,14 +12,19 @@
 }
 
 body{
-    background-color: rgb(243, 183, 208);
+    font-family: 'Bebas-Neue';
+    background-color: rgb(99, 99, 99);
 }
 
 .mainfield{
     max-width: 400px;
     margin: 0 auto;
     margin-top: 10%;
-    background-color: rgb(173, 173, 173);
+    background-color: rgb(46, 46, 46);
+    border: 1px solid rgb(192, 192, 192);
+    border-radius: 24px;
+    color: whitesmoke;
+    box-shadow: inset 0 0 3px 1px white;
 }
 
 .inner-field{
@@ -22,11 +34,27 @@ body{
     margin: 0 auto;
 }
 
+.input-title{
+    margin-top: 30px;
+    margin-bottom: 2px;
+    font-size: 15px;
+}
+
 .input{
     min-width: 100%;
     height: 30px;
     font-size: 20px;
-    margin-top: 30px;
+    font-weight: 500;
+    background-color: rgb(214, 214, 214);
+    border: 3px solid rgb(105, 105, 105);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.input:focus{
+    outline: none;
+    outline-offset: 0;
+    background-color: whitesmoke;
 }
 
 .founded,
@@ -36,16 +64,20 @@ body{
 
 .founded{
     margin-top: 0px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    overflow: hidden;
 }
 
 .founded-variant{
-    background-color: rgb(255, 215, 215);
+    background-color: rgb(228, 228, 228);
+    color: rgb(49, 49, 49);
     border: 1px solid gray;
     cursor: pointer;
 }
 
 .founded-variant:hover{
-    background-color: wheat;
+    background-color: whitesmoke;
 }
 
 .repo{
