@@ -98,3 +98,31 @@ body{
     width: 35px;
     height: 35px;
 }
+
+.close-button::before,
+.close-button::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background-color: black;
+    border: 1px solid black;
+}
+
+.close-button::before{
+    top: 13px;
+    left: 0px;
+    transform: rotate(45deg) ;
+}
+
+.close-button::after{
+    top: 13px;
+    left: 0px;
+    transform: rotate(-45deg);
+}
+
+.close-button:hover{
+    cursor: pointer;
+    border-radius: 2px;
+}

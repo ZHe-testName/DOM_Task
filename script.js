@@ -25,6 +25,18 @@ function deleteElemsByClass(classSelector){
     liForDeleating.forEach(li => li.remove());
 };
 
+function removeCheckedLi(event){
+    const target = event.target;
+
+    if (target.tagName === 'BUTTON'){
+        [].forEach.call(checkedList.children, item => {
+            if (item === target.parentNode){
+                item.remove();
+            }
+        })
+    }
+}
+
 
 function listCreator(array){
     const liArr = array.map(item => {
@@ -58,6 +70,7 @@ function chekedListCreator(event){
     });
 
     deleteElemsByClass('.founded-variant');
+    mainInput.value = '';
 };
 
 async function responseRenderer(response){
@@ -89,5 +102,6 @@ const debouncedReposHandler = debounce(reposHandler, 900);
 
 mainInput.addEventListener('input', debouncedReposHandler);
 autoCompelatList.addEventListener('click', chekedListCreator);
+checkedList.addEventListener('click', removeCheckedLi);
 
 
